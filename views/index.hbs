@@ -71,29 +71,6 @@
                             </div>
                         </div>
                         <div class="lrs-divider-3"></div>
-                        <div class="interests">
-                            <h5><b>My Interests</b></h5>
-                            <ul class="list-inline list-unstyled">
-                                <li>
-                                    <i class="fa fa-soccer-ball-o fa-3x lrs-tooltip-1" data-toggle="tooltip" data-placement="bottom" title="Soccer"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-bicycle fa-3x" data-toggle="tooltip" data-placement="bottom" title="Cycling"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-headphones fa-3x" data-toggle="tooltip" data-placement="bottom" title="Music"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-camera-retro fa-3x" data-toggle="tooltip" data-placement="bottom" title="Photography"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-map fa-3x" data-toggle="tooltip" data-placement="bottom" title="Travel"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-shopping-bag fa-3x" data-toggle="tooltip" data-placement="bottom" title="Shopping"></i>
-                                </li>
-                            </ul>
-                        </div>
                     {{/with}}
                 </div>
             </div>
@@ -102,12 +79,13 @@
     <!--========== End Content About Section ==========-->
 
     <!--========== Start Content Education Section ==========-->
+{{#with section3}}
     <section class="lrs-section" id="education">
         <div class="container">
             <div class="row">
                 <div class="lrs-heading-wrap ">
                     <h3 class="lrs-heading-title">
-                        <span class="nr-heading-title">02.</span> Education
+                        <span class="nr-heading-title">02.</span> {{headingTitle}}
                     </h3>
                 </div>
                 <div class="lrs-divider-3"></div>
@@ -115,55 +93,45 @@
                     <div class="timeline-block timeline-block-left">
                         <div class="marker"></div>
                         <div class="timeline-content">
-                            <h5>Software Engineering</h5>
-                            <span>Oxford University / 2000 - 2005</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate.</p>
+                            <h5>{{header}}</h5>
+                            <span>{{subHeader}}</span>
+                            <p>{{content}}</p>
                         </div>
                     </div>
 
                     <div class="timeline-block timeline-block-right">
                         <div class="marker"></div>
                         <div class="timeline-content">
-                            <h5>UI/UX Workshop</h5>
-                            <span>ClickGlobal / Ian 2000 - Feb 2000</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate.</p>
+                            <h5>{{header1}}</h5>
+                            <span>{{subHeader1}}</span>
+                            <p>{{content1}}</p>
                         </div>
                     </div>
 
                     <div class="timeline-block timeline-block-left">
                         <div class="marker"></div>
                         <div class="timeline-content">
-                            <h5>Web Development</h5>
-                            <span>IT Academy / 1998 - 1999</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-block timeline-block-right">
-                        <div class="marker"></div>
-                        <div class="timeline-content">
-                            <h5>High School</h5>
-                            <span>Lorem College / 1994 - 1998</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate.</p>
+                            <h5>{{header2}}</h5>
+                            <span>{{subHeader2}}</span>
+                            <p>{{content2}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+{{/with}}
     <!--========== End Content Education Section ==========-->
 
     <!--========== Start Content Skills Section ==========-->
+{{#with section4}}
     <section class="lrs-angle" id="skills">
         <div class="lrs-angle-div">
             <div class="container">
                 <div class="row">
                     <div class="lrs-heading-wrap">
                         <h3 class="lrs-heading-title">
-                            <span class="nr-heading-title">03.</span> Skills
+                            <span class="nr-heading-title">03.</span> {{headingTitle}}
                         </h3>
                     </div>
                     <div class="lrs-divider-3"></div>
@@ -171,29 +139,29 @@
                         <div class="lrs-progress">
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>Html/Css</span>
-                                    <span class="pull-right">90%</span>
+                                    <span>{{skill}}</span>
+                                    <span class="pull-right">{{level}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>JavaScript</span>
-                                    <span class="pull-right">70%</span>
+                                    <span>{{skill1}}</span>
+                                    <span class="pull-right">{{level1}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level1}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>Wordpress</span>
-                                    <span class="pull-right">90%</span>
+                                    <span>{{skill2}}</span>
+                                    <span class="pull-right">{{level2}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level2}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -202,29 +170,29 @@
                         <div class="lrs-progress">
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>Html/Css</span>
-                                    <span class="pull-right">90%</span>
+                                    <span>{{skill3}}</span>
+                                    <span class="pull-right">{{level3}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level3}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>JavaScript</span>
-                                    <span class="pull-right">70%</span>
+                                    <span>{{skill4}}</span>
+                                    <span class="pull-right">{{level4}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level4}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="lrs-progress-bar">
                                 <div class="lrs-progress-bar-title">
-                                    <span>Wordpress</span>
-                                    <span class="pull-right">90%</span>
+                                    <span>{{skill5}}</span>
+                                    <span class="pull-right">{{level5}}</span>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="20" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{level5}}" aria-valuemin="20" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -234,6 +202,7 @@
         </div>
 
     </section>
+{{/with}}
     <!--========== End Content Skills Section ==========-->
 
     <!--========== Start Content Experience Section ==========-->
