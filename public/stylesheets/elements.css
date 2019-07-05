@@ -184,17 +184,19 @@
   @media only screen and (max-width: 769px) {
      h1,
     .h1 {
-      top: -15vh;
       font-size: 24px;
       line-height: 24px;
       position: relative;
     }
     h2,
     .h2 {
-      top: -15vh;
+      
       font-size: 22px;
       line-height: 22px;
       position: relative;
+    }
+    .top {
+      top: -9vh;
     }
     h3,
     .h3 {

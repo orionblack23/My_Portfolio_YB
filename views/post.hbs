@@ -5,7 +5,41 @@
     <!--========== Start Header ==========-->
     <header class="lrs-header">
         <!--========== Start Navigation ==========-->
-        {{>navBar}}
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--========== Start Brand Logo ==========-->
+                        {{#with navbar}}
+                        <div class="navbar-brand pull-left">
+                            <a href="/"><h3 class="brand">{{brandName}}</h3></a>
+                        </div>
+                        {{/with}}
+                        <!--========== End Brand Logo ==========-->
+                    </div>
+                    <!--==========  Collect the nav links, forms, and other content for toggling  ==========-->
+                    <div class="collapse navbar-collapse navbar-collapse1">
+                        <div class="nav pull-right">
+                            <a href="/" class="lrs-link-nav">Home</a>
+                            <!--<a href="#education" class="lrs-link-nav">Education</a>
+                            <a href="#skills" class="lrs-link-nav">Skills</a>
+                            <a href="#work" class="lrs-link-nav">Work</a>
+                            <a href="#experience" class="lrs-link-nav">Experience</a>
+                            <a href="#reference" class="lrs-link-nav">References</a>
+                            <a href="#pricing" class="lrs-link-nav">Pricing</a>
+                            <a href="blog.html" class="lrs-link-nav">Blog</a>
+                            <a href="#contact" class="lrs-link-nav">Contact</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <!--========== End Navigation ==========-->
     </header>
     <!--========== End Header ==========-->
@@ -182,47 +216,42 @@
 
         <div class="lrs-divider-3"></div>
 
-        <section class="lrs-angle" id="contact">
-            <div class="lrs-angle-div">
-                <div class="container">
-                    <div class="row">
-                        <div class="animation-element bounce-up">
-                            <div class="lrs-heading-wrap">
-                                <h3 class="lrs-heading-title">
-                                    <span class="nr-heading-title">06.</span> Contact
-                                </h3>
-                            </div>
-                            <div class="lrs-divider-3"></div>
-                            <div class="email">
-                                <h5 class="email"  data-toggle="modal" data-target="#modal_contact">
-                                    <b>contact@domain.com</b>
-                                    <span class="click_email"><i class="fa fa-long-arrow-left"></i> Click here!</span>
-                                </h5>
-                            </div>
-                            <h5 class="phone">
-                                <b>+40 123 456 789</b>
-                            </h5>
-                            <ul class="list-unstyled list-inline social">
-                                <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                            <p class="copy_rights">© 2019 Orion Black. All rights reserved.</p>
-                        </div>
+<!--========== Start Content Contact Section ==========-->
+{{#with section7}}
+    <section class="lrs-angle" id="contact">
+        <div class="lrs-angle-div">
+            <div class="container">
+                <div class="row">
+                    <div class="lrs-heading-wrap">
+                        <h3 class="lrs-heading-title">
+                            <span class="nr-heading-title">06.</span> {{headingTitle}}
+                        </h3>
                     </div>
+                    <div class="lrs-divider-3"></div>
+                    <div class="email">
+                        <h5 class="email"  data-toggle="modal" data-target="#modal_contact">
+                            <b>{{email}}</b>
+                            <span class="click_email"><i class="fa fa-long-arrow-left"></i> Click here!</span>
+                        </h5>
+                    </div>
+                    <h5 class="phone">
+                        <b>{{phone}}</b>
+                    </h5>
+                    <ul class="list-unstyled list-inline social">
+                        <!--<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+                        <li><a target="_blank" href="{{social1}}"><i class="fa {{social1Font}}"></i></a></li>
+                        <li><a target="_blank" href="{{social2}}"><i class="fa {{social2Font}}"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+                    </ul>
+                    <p class="copy_rights">© 2019 Orion Black. All rights reserved.</p>
                 </div>
             </div>
-
-        </section>
-        <!--========== End Content Contact Section ==========-->
-
-    </div>
-    <!--========== End Content Page ==========-->
-</div>
-<!--========== End Wrapper ==========-->
+        </div>
+    </section>
+{{/with}}
+    <!--========== End Content Contact Section ==========-->
 
 <!--========== Start Modal Contact ==========-->
 <div class="modal fade" id="modal_contact" tabindex="-1" role="dialog" aria-labelledby="modal_contact">
@@ -231,25 +260,24 @@
             <div class="lrs-divider-3"></div>
             <h4><b>Contact Me</b></h4>
             <div class="lrs-divider-3"></div>
-            <form action="#" class="form_contact">
+            <form action="/post/send" method="POST" class="form_contact">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Name">
+                    <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
                 <div class="input-group">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="email" name="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Subject">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject">
                 </div>
                 <div class="input-group">
-                    <textarea name="message" class="form-control"  id="message" placeholder="Message"></textarea>
+                    <textarea name="message" name="message" class="form-control"  id="message" placeholder="Message"></textarea>
                 </div>
                 <div class="input-group">
                     <input type="submit" class="submit pull-right" value="Send"/>
                 </div>
             </form>
             <p class="btn-modern dismiss-modal" data-dismiss="modal">X</p>
-
         </div>
     </div>
 </div>
