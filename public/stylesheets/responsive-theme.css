@@ -53,11 +53,11 @@
     height: 30px;
   }
   .lrs-first-section .right {
-    top: 0;
-    right: -20vh;
+    top: 19vh;
+    right: -5vh;
   }
   .lrs-first-section .left {
-    padding-left: 5%;
+    /*padding-left: 5%;*/
   }
   button.navbar-toggle {
     border: none;
