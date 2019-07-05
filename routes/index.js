@@ -85,7 +85,7 @@ router.get('/', function(req, res, next) {
    });
 });
 
-router.post('/post', (req, res, next) => { 
+router.post('/post/send', (req, res, next) => { 
   const output =`
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
