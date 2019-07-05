@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -77,10 +80,55 @@ router.get('/', function(req, res, next) {
       social1: 'https://github.com/orionblack23',
       social1Font: 'fa-github',
       social2: 'https://www.linkedin.com/in/yasser-belemlougri-a3672610b/',
-      social2Font: 'fa-linkedin',
-
+      social2Font: 'fa-linkedin'
     }
    });
+});
+
+router.post('/post', (req, res, next) => { 
+  const output =`
+      <p>You have a new contact request</p>
+      <h3>Contact Details</h3>
+      <ul>
+        <li>Name: ${req.body.name}</li>
+        <li>Email: ${req.body.email}</li>
+        <li>Email: ${req.body.subject}</li>
+      </ul>
+      <h3>Message</h3>
+      <p>${req.body.message}</p>
+ `;
+
+ // create reusable transporter object using the default SMTP transport
+ var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  auth: {
+    user: 'betglamx@gmail.com', // generated ethereal user
+    pass: 'orionblack23' // generated ethereal password
+  },
+  tls:{
+    rejectUnauthorized:false
+  }
+}));
+
+// send mail with defined transport object
+  let mailOption = {
+  from: '"Nodemailer address" <betglamx@gmail.com>', // sender address
+  to: "orionb.y23@gmail.com", // list of receivers
+  subject: "Mail Request From Your Portfolio", // Subject line
+  text: "Hello world?", // plain text body
+  html: output // html body
+};
+
+transporter.sendMail(mailOption, (error, info) => {
+  if (error) {
+    return console.log(error);
+  }
+  console.log("Message sent: %s", info.messageId);
+  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+  res.redirect('/');
+});
 });
 
 module.exports = router;
