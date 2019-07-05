@@ -13,15 +13,17 @@
     <div class="lrs-first-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4 left">
-                    <h1 class="title">John Doe</h1>
-                    <h2 class="subtitle">FRONTEND DEVELOPER</h2>
-                    <div class="lrs-divider-2"></div>
-                    <a href="#about"><p class="btn-modern">About Me</p></a>
-                </div>
-                <div class="col-xs-12 col-sm-6 pull-right right">
-                    <img src="/images/man3.png" class="img-responsive" alt="Resume / CV">
-                </div>
+                {{#with section1}}
+                    <div class="col-xs-12 col-sm-4 left">
+                        <h1 class="title">{{title}}</h1>
+                        <h2 class="subtitle">{{subtitle}}</h2>
+                        <div class="lrs-divider-2"></div>
+                        <a href="#about"><p class="btn-modern">About Me</p></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 pull-right right">
+                        <img src="{{profileImage}}" class="img-responsive" alt="Resume / CV">
+                    </div>
+                {{/with}}
             </div>
         </div>
     </div>
@@ -32,67 +34,67 @@
         <div class="lrs-angle-div">
             <div class="container">
                 <div class="row">
-                    <div class="lrs-heading-wrap">
-                        <h3 class="lrs-heading-title">
-                            <span class="nr-heading-title">01.</span> About Me
-                        </h3>
-                    </div>
-                    <div class="lrs-divider-3"></div>
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <p><b>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, consectetur culpa,
-                                cupiditate explicabo ipsum nobis officia omnis pariatur quos rerum saepe sed. Aliquid culpa
-                                cum distinctio obcaecati officiis quaerat quas.
-                            </b></p>
-                            <br/>
-                            <ul class="list-unstyled list-inline">
-                                <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                            <div class="lrs-divider-3"></div>
-                            <a href="#" class="btn-modern">Download resume</a>
+                    {{#with section2}}
+                        <div class="lrs-heading-wrap">
+                            <h3 class="lrs-heading-title">
+                                <span class="nr-heading-title">01.</span> {{headingTitle}}
+                            </h3>
                         </div>
-                    </div>
-                    <div class="col-sm-5 pull-right">
-                        <div class="row">
-                            <ul class="list-unstyled info">
-                                <li>Name:<span class="pull-right">John Doe</span></li>
-                                <li>Date of birth:<span class="pull-right">12 April 1987</span></li>
-                                <li>Email:<span class="pull-right">contact@domain.com</span></li>
-                                <li>Phone:<span class="pull-right">+40 123 456 789</span></li>
-                                <li>City:<span class="pull-right">Cluj-Napoca, Romania</span></li>
+                        <div class="lrs-divider-3"></div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <p><b>
+                                    {{content}}
+                                </b></p>
+                                <br/>
+                                <ul class="list-unstyled list-inline">
+                                    <!--<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                    <li><a target="_blank" href="{{social1}}"><i class="fa {{social1Font}}"></i></a></li>
+                                    <li><a target="_blank" href="{{social2}}"><i class="fa {{social2Font}}"></i></a></li>
+                                    <!--<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+                                </ul>
+                                <div class="lrs-divider-3"></div>
+                                <a target="_blank" href="{{download}}" class="btn-modern">Download resume</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 pull-right">
+                            <div class="row">
+                                <ul class="list-unstyled info">
+                                    <li>Name:<span class="pull-right">{{title}}</span></li>
+                                    <li>Date of birth:<span class="pull-right">{{dateOfBirth}}</span></li>
+                                    <li>Email:<span class="pull-right">{{email}}</span></li>
+                                    <li>Phone:<span class="pull-right">{{phone}}</span></li>
+                                    <li>City:<span class="pull-right">{{city}}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lrs-divider-3"></div>
+                        <div class="interests">
+                            <h5><b>My Interests</b></h5>
+                            <ul class="list-inline list-unstyled">
+                                <li>
+                                    <i class="fa fa-soccer-ball-o fa-3x lrs-tooltip-1" data-toggle="tooltip" data-placement="bottom" title="Soccer"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-bicycle fa-3x" data-toggle="tooltip" data-placement="bottom" title="Cycling"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-headphones fa-3x" data-toggle="tooltip" data-placement="bottom" title="Music"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-camera-retro fa-3x" data-toggle="tooltip" data-placement="bottom" title="Photography"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map fa-3x" data-toggle="tooltip" data-placement="bottom" title="Travel"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-shopping-bag fa-3x" data-toggle="tooltip" data-placement="bottom" title="Shopping"></i>
+                                </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="lrs-divider-3"></div>
-                    <div class="interests">
-                        <h5><b>My Interests</b></h5>
-                        <ul class="list-inline list-unstyled">
-                            <li>
-                                <i class="fa fa-soccer-ball-o fa-3x lrs-tooltip-1" data-toggle="tooltip" data-placement="bottom" title="Soccer"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-bicycle fa-3x" data-toggle="tooltip" data-placement="bottom" title="Cycling"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-headphones fa-3x" data-toggle="tooltip" data-placement="bottom" title="Music"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-camera-retro fa-3x" data-toggle="tooltip" data-placement="bottom" title="Photography"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-map fa-3x" data-toggle="tooltip" data-placement="bottom" title="Travel"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-shopping-bag fa-3x" data-toggle="tooltip" data-placement="bottom" title="Shopping"></i>
-                            </li>
-                        </ul>
-                    </div>
+                    {{/with}}
                 </div>
             </div>
         </div>
