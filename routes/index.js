@@ -54,6 +54,31 @@ router.get('/', function(req, res, next) {
       level4: '70',
       skill5: 'SQL',
       level5: '80',
+    },
+    section5: {
+      headingTitle: 'Experience',
+      header: 'Intern at Huawei BURKINA FASO',
+      subHeader: 'Huawei Burkina | 2018 - 2019',
+      content: 'Understing principle of networking, viewing real-time server configuration and learning how to use eNSP.',
+      header1: 'Freelancer for Merveille Technologies',
+      subHeader1: 'Merveille Technologies | 2018 - Present',
+      content1: 'Work as a part-time photoshop and web designer. Developping front-end as well as back-end responsive websites.',
+      header2: 'Charity Association Hands-Up',
+      subHeader2: 'Hands-Up | 2018 - Present',
+      content2: 'Being currently the general secretary and also responsible of the design and the IT section of the association.',
+    },
+    section6: {
+      headingTitle: 'My Blog',
+    },
+    section7: {
+      headingTitle: 'Contact',
+      email: 'orionb.y23@gmail.com',
+      phone: '+90 533 836 13 68',
+      social1: 'https://github.com/orionblack23',
+      social1Font: 'fa-github',
+      social2: 'https://www.linkedin.com/in/yasser-belemlougri-a3672610b/',
+      social2Font: 'fa-linkedin',
+
     }
    });
 });
