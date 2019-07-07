@@ -5,41 +5,7 @@
     <!--========== Start Header ==========-->
     <header class="lrs-header">
         <!--========== Start Navigation ==========-->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="navbar-header page-scroll">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!--========== Start Brand Logo ==========-->
-                        {{#with navbar}}
-                        <div class="navbar-brand pull-left">
-                            <a href="/"><h3 class="brand">{{brandName}}</h3></a>
-                        </div>
-                        {{/with}}
-                        <!--========== End Brand Logo ==========-->
-                    </div>
-                    <!--==========  Collect the nav links, forms, and other content for toggling  ==========-->
-                    <div class="collapse navbar-collapse navbar-collapse1">
-                        <div class="nav pull-right">
-                            <a href="/" class="lrs-link-nav">Home</a>
-                            <!--<a href="#education" class="lrs-link-nav">Education</a>
-                            <a href="#skills" class="lrs-link-nav">Skills</a>
-                            <a href="#work" class="lrs-link-nav">Work</a>
-                            <a href="#experience" class="lrs-link-nav">Experience</a>
-                            <a href="#reference" class="lrs-link-nav">References</a>
-                            <a href="#pricing" class="lrs-link-nav">Pricing</a>
-                            <a href="blog.html" class="lrs-link-nav">Blog</a>
-                            <a href="#contact" class="lrs-link-nav">Contact</a>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        {{>navBar}}
         <!--========== End Navigation ==========-->
     </header>
     <!--========== End Header ==========-->
