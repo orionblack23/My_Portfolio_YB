@@ -169,7 +169,7 @@
       top: 100px;
     }
     img {
-      position: relative;
+      position: relative !important;
     }
     .pictureTop {
       top: -120px;
@@ -264,7 +264,7 @@
       top: 30px;
     }
     img {
-      position: relative;
+      position: relative !important;
     }
     .pictureTop {
       top: -220px;
@@ -315,7 +315,7 @@
       top: 30px;
     }
     img {
-      position: relative;
+      position: relative !important;
     }
     .pictureTop {
       top: 43px;
@@ -370,7 +370,7 @@
       padding-left: 15%;
     }
     img {
-      position: relative;
+      position: relative !important;
     }
     .pictureTop {
       top: 700px;
