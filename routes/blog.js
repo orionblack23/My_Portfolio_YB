@@ -16,4 +16,36 @@ router.get('/blog', (req, res, next) => {
     });
 });
 
+router.post('/blog', (req, res, next) => {
+    res.status(200).json({
+        message: 'Handling POST requests to blog'
+    });
+});
+
+router.get('/blog/:postId', (req, res, next) => {
+    const id = req.params.postId;
+    if(id === 'special') {
+        res.status(200).json({
+            message: 'You discovered the special ID'
+        });
+    } else {
+        res.status(200).json({
+            message: 'You pass an ID',
+            id: id
+        });
+    }
+});
+
+router.patch('/blog/:postId', (req, res, next) => {
+    res.status(200).json({
+        message: 'Updated method!'
+    });
+});
+
+router.delete('/blog/:postId', (req, res, next) => {
+    res.status(200).json({
+        message: 'deleted method!'
+    });
+});
+
 module.exports = router;
