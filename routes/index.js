@@ -19,9 +19,9 @@ router.get('/', function(req, res, next) {
         },
         section2: {
           headingTitle: 'About Me',
-          content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, consectetur culpa,
-                    cupiditate explicabo ipsum nobis officia omnis pariatur quos rerum saepe sed. Aliquid culpa
-                    cum distinctio obcaecati officiis quaerat quas.`,
+          content: `Highly self-motivated and hardworking web developer and web designer who is passionate and competent enough to keep up to date with recent technological and software developments.
+                     I enjoy creating products that are user-friendly, effective and appealing which makes me a quick learner and  pay attention to finer details to always meet up with the client’s requirements.
+                     I am very collaborative, and an effective team player known for creativity and flexibility with excellent oral and written communication skills.`,
           social1: 'https://github.com/orionblack23',
           social1Font: 'fa-github',
           social2: 'https://www.linkedin.com/in/yasser-belemlougri-a3672610b/',
