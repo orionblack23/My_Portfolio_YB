@@ -14,6 +14,7 @@
     <!--========== Start Content Page ==========-->
     <div class="lrs-content-post">
         <!--========== Start Content Post ==========-->
+    {{#with items}}
         <div class="container">
             <div class="row">
                 <div class="lrs-post-page">
@@ -23,161 +24,30 @@
                                 <img src="/images/92.jpg" class="img-responsive" alt="Resume / CV"/>
                             </div>
                             <div class="lrs-post-page-content">
-                                <span class="lrs-post-page-category"><i>UX & UI Design</i></span>
+                                <span class="lrs-post-page-category"><i>{{this.category}}</i></span>
                                 <h2 class="lrs-post-page-title">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    {{this.title}}
                                 </h2>
                                 <br/>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam atque culpa delectus dolor dolorem doloremque eum fugiat harum, itaque iure laborum minima minus nemo, nesciunt qui quod ratione ullam?
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam atque culpa delectus dolor dolorem doloremque eum fugiat harum, itaque iure laborum minima minus nemo, nesciunt qui quod ratione ullam?
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam atque culpa delectus dolor dolorem doloremque eum fugiat harum, itaque iure laborum minima minus nemo, nesciunt qui quod ratione ullam?
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam atque culpa delectus dolor dolorem doloremque eum fugiat harum, itaque iure laborum minima minus nemo, nesciunt qui quod ratione ullam?
+                                    {{this.content}}
                                 </p>
                                 <br>
                                 <blockquote class="style_1">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi, doloremque ea est
-                                    ipsam, iure, laudantium libero magnam maiores non nostrum officia optio possimus quo quos
-                                    reiciendis sequi voluptatem.
-                                    <span class="author">- John Doe</span>
+                                    {{this.authorSitation}}
+                                    <span class="author">- {{this.author}}</span>
                                 </blockquote>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam atque culpa delectus dolor dolorem doloremque eum fugiat harum, itaque iure laborum minima minus nemo, nesciunt qui quod ratione ullam?
+                                    {{this.conclusion}}
                                 </p>
                             </div>
                             <div class="lrs-divider-3"></div>
-                            <div class="lrs-post-page-post_comments">
-                                <h5><b>Comments (12)</b></h5>
-                                <div class="lrs-post-page-comments">
-                                    <div class="lrs-post-page-comment">
-                                        <div class="lrs-post-page-img">
-                                            <img src="/images/c2.jpg" class="img-responsive img-circle" alt="Resume / CV"/>
-                                        </div>
-                                        <div class="lrs-post-page-content">
-                                            <h6 class="lrs-post-page-name">John Doe</h6>
-                                            <span>April 22, 2016 at 4:00 pm</span>
-                                            <a href="#" class="lrs-post-page-replay">Replay</a>
-                                            <p class="lrs-post-page-message">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
-                                                at deleniti, dicta doloremque ducimus eos iure minima nesciunt optio
-                                                quibusdam quidem repudiandae sit velit veritatis voluptatum. Ea illo
-                                                maxime perspiciatis?
-                                            </p>
-                                        </div>
-                                        <div class="lrs-post-page-comment_replay">
-                                            <div class="lrs-post-page-img">
-                                                <img src="/images/c3.jpg" class="img-responsive img-circle" alt="Resume / CV"/>
-                                            </div>
-                                            <div class="lrs-post-page-content">
-                                                <h6 class="lrs-post-page-name">John Doe</h6>
-                                                <span>April 22, 2016 at 4:00 pm</span>
-                                                <a href="#" class="lrs-post-page-replay">Replay</a>
-                                                <p class="lrs-post-page-message">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
-                                                    at deleniti, dicta doloremque ducimus eos iure minima nesciunt optio
-                                                    quibusdam quidem repudiandae sit velit veritatis voluptatum. Ea illo
-                                                    maxime perspiciatis?
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="lrs-post-page-comment">
-                                        <div class="lrs-post-page-img">
-                                            <img src="/images/c2.jpg" class="img-responsive img-circle" alt="Resume / CV"/>
-                                        </div>
-                                        <div class="lrs-post-page-content">
-                                            <h6 class="lrs-post-page-name">John Doe</h6>
-                                            <span>April 22, 2016 at 4:00 pm</span>
-                                            <a href="#" class="lrs-post-page-replay">Replay</a>
-                                            <p class="lrs-post-page-message">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
-                                                at deleniti, dicta doloremque ducimus eos iure minima nesciunt optio
-                                                quibusdam quidem repudiandae sit velit veritatis voluptatum. Ea illo
-                                                maxime perspiciatis?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lrs-divider-3"></div>
-                                <h5>Leave comment</h5>
-                                <br/>
-                                <form action="#" class="form_comments">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="input-group">
-                                        <textarea name="message" class="form-control"  id="message-comment" placeholder="Message"></textarea>
-                                    </div>
-                                    <input type="submit" class="submit pull-right" value="Post comment"/>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0 pull-right lrs-sidebar-post">
-                        <div class="row">
-                            <form action="#" class="form_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                                </span>
-                                </div>
-                            </form>
-                            <hr/>
-                            <div class="popular_posts">
-                                <h2>Popular posts</h2>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <div class="post_media"><a href="#"><img src="/images/91.jpg" class="img-responsive" alt="Resume / CV"></a></div>
-                                        <h3 class="post_title"><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <div class="post_info"><a href="#"><i class="fa fa-comment-o"></i> 26 comments</a></div>
-                                    </li>
-                                    <li>
-                                        <div class="post_media"><a href="#"><img src="/images/93.jpg" class="img-responsive" alt="Resume / CV"></a></div>
-                                        <h3 class="post_title"><a href="#">Lorem ipsum dolor sit amet.</a></h3>
-                                        <div class="post_info"><a href="#"><i class="fa fa-comment-o"></i> 26 comments</a></div>
-                                    </li>
-                                    <li>
-                                        <div class="post_media"><a href="#"><img src="/images/94.jpg" class="img-responsive" alt="Resume / CV"></a></div>
-                                        <h3 class="post_title"><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <div class="post_info"><a href="#"><i class="fa fa-comment-o"></i> 26 comments</a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr/>
-                            <div class="tag">
-                                <h2>Tag</h2>
-                                <div class="t">
-                                    <a href="#" title="1 topic">Business</a>
-                                    <a href="#" title="9 topics">Photo</a>
-                                    <a href="#" title="10 topics">Design</a>
-                                    <a href="#" title="6 topics">Fashion</a>
-                                    <a href="#" title="2 topics">Music</a>
-                                    <a href="#" title="5 topics">Web</a>
-                                    <a href="#" title="9 topics">Development</a>
-                                </div>
-                            </div>
-                            <hr/>
-                            <div class="categories">
-                                <h2 class="widget-title">Categories</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Business <span>(12)</span></a></li>
-                                    <li><a href="#">Photo <span>(4)</span></a></li>
-                                    <li><a href="#">Design <span>(8)</span></a></li>
-                                    <li><a href="#">Fashion <span>(16)</span></a></li>
-                                    <li><a href="#">Music <span>(27)</span></a></li>
-                                    <li><a href="#">Web <span>(49)</span></a></li>
-                                    <li><a href="#">Development <span>(6)</span></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    {{/with}}
         <!--========== End Content Post ==========-->
 
         <div class="lrs-divider-3"></div>
